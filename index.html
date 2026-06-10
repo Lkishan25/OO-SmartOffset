@@ -211,6 +211,67 @@ h1 em{color:var(--red);display:block;font-style:normal}
   .vb{min-height:300px}
   #nav{display:none}
 }
+
+/* ═══ MOBILE ═══ */
+@media (max-width:600px){
+  /* disable snap — let it scroll naturally */
+  html{scroll-snap-type:none !important}
+  .pg{height:auto !important;min-height:0 !important;scroll-snap-align:none}
+
+  /* hide hero right panel on mobile — too small */
+  .p1r{display:none !important}
+  #hero{grid-template-columns:1fr !important;grid-template-rows:1fr auto}
+  .hl{padding:36px 28px;border-right:none !important}
+  h1{font-size:clamp(52px,14vw,90px) !important}
+
+  /* page 2 — stack modes over hotkeys */
+  #p2{display:block !important}
+  .p2body{display:block !important}
+  .modes-panel{border-right:none !important;border-bottom:2px solid var(--ink)}
+  .mode-row{grid-template-columns:1fr !important}
+  .mode-vis{display:none}  /* hide tiny SVGs on mobile */
+  .mode-info{padding:14px 16px !important}
+  .hk-panel{padding:16px 16px !important}
+  .hk-grid{grid-template-columns:repeat(2,1fr) !important;grid-template-rows:repeat(4,auto) !important}
+  .hki{padding:14px 12px !important}
+  .hki:nth-child(2n){border-right:none !important}
+  .hki:nth-child(n+7){border-bottom:none !important}
+  .hki:nth-child(1),.hki:nth-child(2),.hki:nth-child(3),.hki:nth-child(4),.hki:nth-child(5),.hki:nth-child(6){border-bottom:1px solid var(--border) !important}
+  .p2h .p2title{font-size:20px !important}
+  .p2num{font-size:44px !important;padding:10px 16px !important}
+
+  /* page 3 — stack left panel over canvas */
+  #p3{display:block !important}
+  .p3body{display:block !important}
+  .p3left{border-right:none !important;border-bottom:2px solid var(--ink);padding:16px !important}
+  .p3left h3{font-size:16px !important}
+  .p3right{padding:16px !important}
+  .p3right h3{font-size:16px !important}
+  .vb{min-height:220px !important}
+  .p3math{grid-template-columns:1fr !important;height:auto !important}
+  .math-label{display:none}
+  .math-in input{width:120px !important}
+  .math-ex{display:none}
+
+  /* page 4 — stack units + install */
+  #p4{display:block !important}
+  .p4body{display:block !important}
+  .units-panel{border-right:none !important;border-bottom:2px solid var(--ink)}
+  .install-panel{padding:20px 16px !important}
+  .inst{grid-template-columns:1fr 1fr !important}
+  .is:nth-child(2n){border-right:none !important}
+  .p4foot{grid-template-columns:1fr 1fr !important;height:auto !important}
+  .fc-badge{display:none}
+
+  /* section headers */
+  .p3h,.p4h{display:flex !important}
+  .p3num,.p4num{font-size:44px !important;padding:10px 16px !important}
+  .p3title,.p4title{font-size:20px !important}
+
+  /* nav dots — hide */
+  #nav{display:none}
+}
+
 </style>
 </head>
 <body>
